@@ -18,23 +18,25 @@ int main() {
         int D = (cache_size[i] - 4*F - L *S *(12+L/8))/(4*F+L*S/8);
         if(D <= 0)
           break;
-        cout << "(" << cache_size[i] << ", " << D << ", " << S <<")";
+        cout << "(" << cache_size[i] << ", " << D << ", " << S <<")" << endl;;
       }
     }
     else if(i == 1) {
+      cout << "#########" << endl;
       for(int S = 100; S < 20000; S +=100) {
         int D = (cache_size[i] - 4*F - L *S *(12+L/8))/(4*F+L*S/8);
         if(D <= 0)
           break;
-        cout << "(" << cache_size[i] << ", " << D << ", " << S <<")";
+        cout << "(" << cache_size[i] << ", " << D << ", " << S <<")"<< endl;
       }
     }
     else {
+      cout << "########" << endl;
       for(int S = 500; S < 20000; S +=500) {
         int D = (cache_size[i] - 4*F - L *S *(12+L/8))/(4*F+L*S/8);
         if(D <= 0)
           break;
-        cout << "(" << cache_size[i] << ", " << D << ", " << S <<")";
+        cout << "(" << cache_size[i] << ", " << D << ", " << S <<")" << endl;
       }
     }
   }
