@@ -1,0 +1,44 @@
+target/BWQS8bit_full_optm_yahoo_4_10 -ensemble ../fast_rank/yahoo/tree-ensemble-file_20000_8 -instances ../fast_rank/yahoo/100k.txt -maxLeaves 8
+Time per instance per tree(ns): 259.36
+Ignore this number: -177007212.685799
+target/BWQS8bit_full_optm_yahoo_4_20 -ensemble ../fast_rank/yahoo/tree-ensemble-file_20000_8 -instances ../fast_rank/yahoo/100k.txt -maxLeaves 8
+Time per instance per tree(ns): 138.47
+Ignore this number: -177007212.680357
+target/BWQS8bit_full_optm_yahoo_3_30 -ensemble ../fast_rank/yahoo/tree-ensemble-file_20000_8 -instances ../fast_rank/yahoo/100k.txt -maxLeaves 8
+target/BWQS8bit_full_optm_yahoo_3_40 -ensemble ../fast_rank/yahoo/tree-ensemble-file_20000_8 -instances ../fast_rank/yahoo/100k.txt -maxLeaves 8
+target/BWQS8bit_full_optm_yahoo_2_50 -ensemble ../fast_rank/yahoo/tree-ensemble-file_20000_8 -instances ../fast_rank/yahoo/100k.txt -maxLeaves 8
+Time per instance per tree(ns): 61.32
+Ignore this number: -177007212.694205
+target/BWQS8bit_full_optm_yahoo_2_60 -ensemble ../fast_rank/yahoo/tree-ensemble-file_20000_8 -instances ../fast_rank/yahoo/100k.txt -maxLeaves 8
+Time per instance per tree(ns): 53.82
+Ignore this number: -177007112.702646
+target/BWQS8bit_full_optm_yahoo_2_70 -ensemble ../fast_rank/yahoo/tree-ensemble-file_20000_8 -instances ../fast_rank/yahoo/100k.txt -maxLeaves 8
+Time per instance per tree(ns): 48.17
+Ignore this number: -177007170.950418
+target/BWQS8bit_full_optm_yahoo_1_80 -ensemble ../fast_rank/yahoo/tree-ensemble-file_20000_8 -instances ../fast_rank/yahoo/100k.txt -maxLeaves 8
+Time per instance per tree(ns): 42.49
+Ignore this number: -177007212.681858
+target/BWQS8bit_full_optm_yahoo_1_90 -ensemble ../fast_rank/yahoo/tree-ensemble-file_20000_8 -instances ../fast_rank/yahoo/100k.txt -maxLeaves 8
+Time per instance per tree(ns): 40.46
+Ignore this number: -177007135.110078
+target/BWQS8bit_full_optm_yahoo_1_100 -ensemble ../fast_rank/yahoo/tree-ensemble-file_20000_8 -instances ../fast_rank/yahoo/100k.txt -maxLeaves 8
+Time per instance per tree(ns): 32.37
+Ignore this number: -177007212.685566
+target/BWQS8bit_full_optm_yahoo_40_100 -ensemble ../fast_rank/yahoo/tree-ensemble-file_20000_8 -instances ../fast_rank/yahoo/100k.txt -maxLeaves 8
+Time per instance per tree(ns): 34.69
+Ignore this number: -177007212.687026
+target/BWQS8bit_full_optm_yahoo_35_200 -ensemble ../fast_rank/yahoo/tree-ensemble-file_20000_8 -instances ../fast_rank/yahoo/100k.txt -maxLeaves 8
+target/BWQS8bit_full_optm_yahoo_31_300 -ensemble ../fast_rank/yahoo/tree-ensemble-file_20000_8 -instances ../fast_rank/yahoo/100k.txt -maxLeaves 8
+target/BWQS8bit_full_optm_yahoo_27_400 -ensemble ../fast_rank/yahoo/tree-ensemble-file_20000_8 -instances ../fast_rank/yahoo/100k.txt -maxLeaves 8
+target/BWQS8bit_full_optm_yahoo_23_500 -ensemble ../fast_rank/yahoo/tree-ensemble-file_20000_8 -instances ../fast_rank/yahoo/100k.txt -maxLeaves 8
+target/BWQS8bit_full_optm_yahoo_19_600 -ensemble ../fast_rank/yahoo/tree-ensemble-file_20000_8 -instances ../fast_rank/yahoo/100k.txt -maxLeaves 8
+target/BWQS8bit_full_optm_yahoo_15_700 -ensemble ../fast_rank/yahoo/tree-ensemble-file_20000_8 -instances ../fast_rank/yahoo/100k.txt -maxLeaves 8
+target/BWQS8bit_full_optm_yahoo_12_800 -ensemble ../fast_rank/yahoo/tree-ensemble-file_20000_8 -instances ../fast_rank/yahoo/100k.txt -maxLeaves 8
+target/BWQS8bit_full_optm_yahoo_9_900 -ensemble ../fast_rank/yahoo/tree-ensemble-file_20000_8 -instances ../fast_rank/yahoo/100k.txt -maxLeaves 8
+target/BWQS8bit_full_optm_yahoo_6_1000 -ensemble ../fast_rank/yahoo/tree-ensemble-file_20000_8 -instances ../fast_rank/yahoo/100k.txt -maxLeaves 8
+target/BWQS8bit_full_optm_yahoo_3_1100 -ensemble ../fast_rank/yahoo/tree-ensemble-file_20000_8 -instances ../fast_rank/yahoo/100k.txt -maxLeaves 8
+target/BWQS8bit_full_optm_yahoo_537_100 -ensemble ../fast_rank/yahoo/tree-ensemble-file_20000_8 -instances ../fast_rank/yahoo/100k.txt -maxLeaves 8
+target/BWQS8bit_full_optm_yahoo_443_600 -ensemble ../fast_rank/yahoo/tree-ensemble-file_20000_8 -instances ../fast_rank/yahoo/100k.txt -maxLeaves 8
+target/BWQS8bit_full_optm_yahoo_373_1100 -ensemble ../fast_rank/yahoo/tree-ensemble-file_20000_8 -instances ../fast_rank/yahoo/100k.txt -maxLeaves 8
+target/BWQS8bit_full_optm_yahoo_319_1600 -ensemble ../fast_rank/yahoo/tree-ensemble-file_20000_8 -instances ../fast_rank/yahoo/100k.txt -maxLeaves 8
+target/BWQS8bit_full_optm_yahoo_275_2100 -ensemble ../fast_rank/yahoo/tree-ensemble-file_20000_8 -instances ../fast_rank/yahoo/100k.txt -maxLeaves 8

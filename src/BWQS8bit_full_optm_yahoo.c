@@ -98,6 +98,12 @@ void compute_QS()
 		      end = offsets[mt][j+1]; // what we need to test is [begin, end)
 		      if (features[i*D+k][j] <= thresholds[mt][p])
 			      continue;
+		      while (p+8<end && features[i*D+k][j] > thresholds[mt][p+8]) // still false node
+		      {
+			      h = tree_ids[mt][p]; // find current tree_id
+			      v[k][h] &= mybitvectors[mt][p];
+			      p+=8;
+		      } // endwhile
 		      while (p<end && features[i*D+k][j] > thresholds[mt][p]) // still false node
 		      {
 			      h = tree_ids[mt][p]; // find current tree_id
@@ -142,6 +148,14 @@ void compute_QS()
 		      end = offsets[mt][j+1]; // what we need to test is [begin, end)
 		      if (features[i*D+k][j] <= thresholds[mt][p])
 			      continue;
+		      while (p+8<end && features[i*D+k][j] > thresholds[mt][p+8]) // still false node
+		      {
+                  for (size_t i = 0; i < 4; i++) {
+                      h = tree_ids[mt][p]; // find current tree_id
+                      v[k][h] &= mybitvectors[mt][p];
+                      p+=8;
+                  }
+		      } // endwhile
 		      while (p<end && features[i*D+k][j] > thresholds[mt][p]) // still false node
 		      {
 			      h = tree_ids[mt][p]; // find current tree_id

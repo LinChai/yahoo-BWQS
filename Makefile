@@ -4,8 +4,8 @@ SRC_DIR = src
 CC=gcc
 CPP=g++
 
-CFLAGS=-lm -O3 -fomit-frame-pointer -pipe -lpthread
-CPPFLAGS=-O3 -fomit-frame-pointer -pipe -lpthread
+CFLAGS=-lm -O3 -g -fomit-frame-pointer -pipe -lpthread
+CPPFLAGS=-O3 -g -fomit-frame-pointer -pipe -lpthread
 
 DEPS = $(wildcard $(SRC_DIR)/*.h)
 
