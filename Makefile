@@ -16,13 +16,13 @@ CPP_SRC_FILES = $(wildcard $(SRC_DIR)/*.cpp)
 CPP_OUT_FILES = $(patsubst $(SRC_DIR)/%.cpp,$(OUT_DIR)/%,$(CPP_SRC_FILES))
 
 $(OUT_DIR)/%: $(SRC_DIR)/%.c $(DEPS)
-    $(CC) -o $@ $< $(CFLAGS)
+	$(CC) -o $@ $< $(CFLAGS)
 
 $(OUT_DIR)/%: $(SRC_DIR)/%.cpp $(DEPS)
-    $(CPP) -o $@ $< $(CPPFLAGS)
+	$(CPP) -o $@ $< $(CPPFLAGS)
 
 all: $(OUT_FILES) $(CPP_OUT_FILES)
 
 clean:
-    rm -rf $(OUT_DIR)
-    mkdir $(OUT_DIR)
+	rm -rf $(OUT_DIR)
+	mkdir $(OUT_DIR)
