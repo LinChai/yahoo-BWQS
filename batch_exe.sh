@@ -1,3 +1,13 @@
+for LEAF in 8 10 16 32 50 64 150
+do
+    while IFS=' ' read -r cache_size D S
+    do
+        cp src/BWQS$LEAF_full_optm_yahoo.c src/BWQS$LEAFbit_full_optm_yahoo_$D_$S.c
+        sed -i "s/#define D.*/#define D $D \/\/ d/g" src/BWQS$LEAFbit_full_optm_yahoo_$D_$S.c
+        sed -i "s/#define S.*/#define S $S \/\/ s/g" src/BWQS$LEAFbit_full_optm_yahoo_$D_$S.c
+    done
+done < "$input"
+
 for LOOP in 1 2 3 4 5 6 7
 do
     if [ "$LOOP" = "1" ]; then
