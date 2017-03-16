@@ -1,4 +1,4 @@
-for LOOP in 1 2 3 32 50 64 150
+for LOOP in 1 2 3 4 5 6 7
 do
     if [ "$LOOP" = "1" ]; then
         sed -i "s/#define D.*/#define D 1 \/\/ d/g" src/BWQS8bit_full_optm_yahoo1.c
@@ -30,3 +30,10 @@ do
         LEAF=150
     fi
     make
+    echo "result of Leaf_num=$LEAF"
+    for VAR in 1 2 3 4 5 6 7 8 9 10
+    do
+        echo 'BWQS8bit_full_optm_yahoo'$VAR
+        out/BWQS8bit_full_optm_yahoo$VAR -ensemble ./fast_rank/yahoo/tree-ensemble-file_20000_$LEAF -instances ./fast_rank/yahoo/100k.txt -maxLeaves $LEAF
+    done
+    
