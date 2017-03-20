@@ -153,8 +153,8 @@ void compute_QS()
             float * curthresholds = thresholds[mt];
             unsigned int * curtree_ids = tree_ids[mt];
             Byte * curmybitvectors = mybitvectors[mt];
-            for (k=0; k<D; k++) {
-                float * curfeatures = features[i*D+k];
+            for (k=0; k<r; k++) {
+                float * curfeatures = features[divideInstance*D+k];
                 for (j=0; j<numberOfFeatures; j++) {
                     p = curoffsets[j];
                     end = curoffsets[j+1]; // what we need to test is [begin, end)
