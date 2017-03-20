@@ -23,10 +23,10 @@ typedef struct QSNode QSNode;
 typedef uint64_t Byte;
 
 struct QSNode {
+    Byte* bitvector; // how many bytes are determined by maxNumberOfLeaves
     float threshold;
     int fid;
     unsigned int tree_id;
-    Byte* bitvector; // how many bytes are determined by maxNumberOfLeaves
 };
 
 int nbTrees;
@@ -90,6 +90,7 @@ void compute_QS()
             unsigned int * curOffset = offsets[mt];
             Byte ** curbitvector = bitvectors[mt];
             float * curthresholds = thresholds[mt];
+            float * curleaves = leaves[mt];
             for (k=0; k<D; k++) {
                 float*d = features[i*D+k];
                 Byte ** curV = v[k];
@@ -98,13 +99,14 @@ void compute_QS()
                     end = curOffset[j+1]; // what we need to test is [begin, end)
                     if (d[j] <= curthresholds[p])
                         continue;
-                    while (p+8<end && d[j] > curthresholds[p+8]) // still false node
+                    while (p+4<end && d[j] > curthresholds[p+4]) // still false node
                     {
-                        h = curT[p]; // find current tree_id
-                        for (kk=0; kk<b; kk++)
-                            curV[h][kk] &= curbitvector[p][kk];
-                        //v[k][h] &= mybitvectors[mt*max_innerNodeCount+p];
-                        p+=8;
+                        for(size_t t = 0; t < 4; t++) {
+                            h = curT[p];
+                            for(kk = 0; kk < b; kk++)
+                                curV[h][kk] &= curbitvector[p][kk];
+                            p++;
+                        }
                     } // endwhile
                     while(p < end && d[j] > curthresholds[p]) {
                         h = curT[p]; // find current tree_id
@@ -125,7 +127,7 @@ void compute_QS()
                     for (kk = 0;!v[k][h][kk]&& kk<b; kk++)
                         v[k][h][kk] = -1;
                     int l = h * maxNumberOfLeaves + kk * 64 + __builtin_clzll(v[k][h][kk]);
-                    score += leaves[mt][l];
+                    score += curleaves[l];
                     v[k][h][kk] = -1;
                 } // end h
                 sum += score;
@@ -136,6 +138,7 @@ void compute_QS()
         unsigned int * curOffset = offsets[mt];
         Byte ** curbitvector = bitvectors[mt];
         float * curthresholds = thresholds[mt];
+        float * curleaves = leaves[mt];
         for (k=0; k<D; k++) {
             float*d = features[i*D+k];
             Byte ** curV = v[k];
@@ -144,13 +147,14 @@ void compute_QS()
                 end = curOffset[j+1]; // what we need to test is [begin, end)
                 if (d[j] <= curthresholds[p])
                     continue;
-                while (p+8<end && d[j] > curthresholds[p+8]) // still false node
+                while (p+4<end && d[j] > curthresholds[p+4]) // still false node
                 {
-                    h = curT[p]; // find current tree_id
-                    for (kk=0; kk<b; kk++)
-                        curV[h][kk] &= curbitvector[p][kk];
-                    //v[k][h] &= mybitvectors[mt*max_innerNodeCount+p];
-                    p+=8;
+                    for(size_t t = 0; t < 4; t++) {
+                        h = curT[p];
+                        for(kk = 0; kk < b; kk++)
+                            curV[h][kk] &= curbitvector[p][kk];
+                        p++;
+                    }
                 } // endwhile
                 while(p < end && d[j] > curthresholds[p]) {
                     h = curT[p]; // find current tree_id
@@ -171,11 +175,12 @@ void compute_QS()
                 for (kk = 0;!v[k][h][kk]&& kk<b; kk++)
                     v[k][h][kk] = -1;
                 int l = h * maxNumberOfLeaves + kk * 64 + __builtin_clzll(v[k][h][kk]);
-                score += leaves[mt][l];
+                score += curleaves[l];
                 v[k][h][kk] = -1;
             } // end h
             sum += score;
         }
+        mtSize = S;
     }
 
 
@@ -190,50 +195,54 @@ void compute_QS()
             else
                 mtSize = nbTrees - S * (numberOfMetaTree-1);
             // init v[][][] to be 11..1
-            for (k=0; k<r; k++)
-                for (j=0; j<mtSize; j++)
-                    for (kk=0; kk<b; kk++)
-                        v[k][j][kk] = 0xffffffffffffffff;
+            //for (k=0; k<r; k++)
+            //    for (j=0; j<mtSize; j++)
+            //        for (kk=0; kk<b; kk++)
+            //            v[k][j][kk] = -1;
             // Step 1:
-            for (j=0; j<numberOfFeatures; j++) {
-                begin = offsets[mt][j];
-                end = offsets[mt][j+1]; // what we need to test is [begin, end)
-                if (begin == end)
-                    continue;
-                for (k=0; k<r; k++) {
-                    if (features[divideInstance*D+k][j] <= thresholds[mt][begin])
+            unsigned int * curT = tree_ids[mt]; 
+            unsigned int * curOffset = offsets[mt];
+            Byte ** curbitvector = bitvectors[mt];
+            float * curthresholds = thresholds[mt];
+            float * curleaves = leaves[mt];
+            for (k=0; k<D; k++) {
+                float*d = features[divideInstance*D+k];
+                Byte ** curV = v[k];
+                for (j=0; j<numberOfFeatures; j++) {
+                    p = curOffset[j];
+                    end = curOffset[j+1]; // what we need to test is [begin, end)
+                    if (d[j] <= curthresholds[p])
                         continue;
-                    p = begin; // pointer
-                    while (p<end && features[divideInstance*D+k][j] > thresholds[mt][p]) // still false node
+                    while (p+4<end && d[j] > curthresholds[p+4]) // still false node
                     {
-                        h = tree_ids[mt][p]; // find current tree_id
-                        for (kk=0; kk<b; kk++)
-                            v[k][h][kk] &= bitvectors[mt][p][kk];
-                        p++;
+                        for(size_t t = 0; t < 4; t++) {
+                            h = curT[p];
+                            for(kk = 0; kk < b; kk++)
+                                curV[h][kk] &= curbitvector[p][kk];
+                            p++;
+                        }
                     } // endwhile
+                    while(p < end && d[j] > curthresholds[p]) {
+                        h = curT[p]; // find current tree_id
+                        for (kk=0; kk<b; kk++)
+                            curV[h][kk] &= curbitvector[p][kk];
+                        //v[k][h] &= mybitvectors[mt*max_innerNodeCount+p];
+                        p++;
+                    }
                 }
-            }//end j
+            }//end 
             // Step 2:
             Byte test;
             for (k=0; k<r; k++) {
                 score = 0;
                 for (h=0; h<mtSize; h++)
                 {
-                    // for each tree, find the left most 1 of v[k][h] and assign it to j
-                    j = 0;
-                    int y, z;
-                    for (kk=0; kk<b; kk++) {
-                        for (z=0; z<64; z++) {
-                            test = 0x8000000000000000; // test = 1000 0000 ... 0000
-                            for (y=0; y<z; y++)
-                                test = test >> 1;
-                            if (v[k][h][kk] & test != 0) // found!
-                                break;
-                            j++;
-                        } // loop z
-                    } // loop kk
-                    int l = h * maxNumberOfLeaves + j;
-                    score += leaves[mt][l];
+                    // for each tree, find the left most 1 of v[k][h][] and assign it to j
+                    for (kk = 0;!v[k][h][kk]&& kk<b; kk++)
+                        v[k][h][kk] = -1;
+                    int l = h * maxNumberOfLeaves + kk * 64 + __builtin_clzll(v[k][h][kk]);
+                    score += curleaves[l];
+                    v[k][h][kk] = -1;
                 } // end h
                 sum += score;
             }
