@@ -106,8 +106,10 @@ void compute_QS()
                 mtSize = nbTrees - S * (numberOfMetaTree-1);
             // Step 1:
             unsigned int * curoffsets = offsets[mt];
-            unsigned int * curthresholds = thresholds[mt];
+            float * curthresholds = thresholds[mt];
             Byte *curmybitvectors = mybitvectors[mt];
+            unsigned int * curtree_ids = tree_ids[mt];
+            float* curleaves = leaves[mt];
             for (k=0; k<D; k++) {
                 float * curfeatures = features[i*D+k];
                 for (j=0; j<numberOfFeatures; j++) {
@@ -118,7 +120,7 @@ void compute_QS()
                     while (p+4<end && curfeatures[j] > curthresholds[p+4]) // still false node
                     {
                         for(size_t t = 0; t < 4; t++) {
-                            h = tree_ids[mt][p]; // find current tree_id
+                            h = curtree_ids[p]; // find current tree_id
                             v[k][h] &= curmybitvectors[p];
                             //v[k][h] &= mybitvectors[mt*max_innerNodeCount+p];
                             p++;
@@ -126,7 +128,7 @@ void compute_QS()
                     } // endwhile
                     while (p<end && curfeatures[j] > curthresholds[p]) // still false node
                     {
-                        h = tree_ids[mt][p]; // find current tree_id
+                        h = curtree_ids[p]; // find current tree_id
                         v[k][h] &= curmybitvectors[p];
                         //v[k][h] &= mybitvectors[mt*max_innerNodeCount+p];
                         p++;
@@ -143,7 +145,7 @@ void compute_QS()
                     int l = h * maxNumberOfLeaves + __builtin_clz(tmp)-16;
                     // init v[][] to be 11..1
                     v[k][h] = -1; //improve v vector initialization
-                    score += leaves[mt][l];
+                    score += curleaves[l];
                 } // end h
                 sum += score;
             }
@@ -165,6 +167,8 @@ void compute_QS()
             unsigned int * curoffsets = offsets[mt];
             unsigned int * curthresholds = thresholds[mt];
             Byte *curmybitvectors = mybitvectors[mt];
+            unsigned int * curtree_ids = tree_ids[mt];
+            float* curleaves = leaves[mt];
             for (k=0; k<r; k++) {
                 float * curfeatures = features[divideInstance*D+k];
                 for (j=0; j<numberOfFeatures; j++) {
@@ -175,7 +179,7 @@ void compute_QS()
                     while (p+4<end && curfeatures[j] > curthresholds[p]) // still false node
                     {
                         for(size_t t = 0; t < 4; t++) {
-                            h = tree_ids[mt][p]; // find current tree_id
+                            h = curtree_ids[p]; // find current tree_id
                             v[k][h] &= curmybitvectors[p];
                             //v[k][h] &= mybitvectors[mt*max_innerNodeCount+p];
                             p++;
@@ -183,7 +187,7 @@ void compute_QS()
                     } // endwhile
                     while (p<end && curfeatures[j] > curthresholds[p]) // still false node
                     {
-                        h = tree_ids[mt][p]; // find current tree_id
+                        h = curtree_ids[p]; // find current tree_id
                         v[k][h] &= curmybitvectors[p];
                         //v[k][h] &= mybitvectors[mt*max_innerNodeCount+p];
                         p++;
@@ -200,7 +204,7 @@ void compute_QS()
                     int l = h * maxNumberOfLeaves + __builtin_clz(tmp)-16;
                     // init v[][] to be 11..1
                     v[k][h] = -1; //improve v vector initialization
-                    score += leaves[mt][l];
+                    score += curleaves[l];
                 } // end h
                 sum += score;
             }
