@@ -156,7 +156,7 @@ void compute_QS()
             //        v[k][j] = 0xffffffff;
             // Step 1:
             unsigned int * curoffsets = offsets[mt];
-            unsigned int * curthresholds = thresholds[mt];
+            float* curthresholds = thresholds[mt];
             Byte *curmybitvectors = mybitvectors[mt];
             unsigned int * curtree_ids = tree_ids[mt];
             double* curleaves = leaves[mt];
