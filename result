@@ -151,3 +151,186 @@ Ignore this number: -176964814.033120
 target/BWQS8bit_full_optm_yahoo_2_14600 -ensemble ../fast_rank/yahoo/tree-ensemble-file_20000_8 -instances ../fast_rank/yahoo/100k.txt -maxLeaves 8
 Time per instance per tree(ns):  3.59
 Ignore this number: -176990814.620352
+
+
+
+target/BWQS10bit_full_optm_yahoo_4_10 -ensemble ../fast_rank/yahoo/tree-ensemble-file_20000_10 -instances ../fast_rank/yahoo/100k.txt -maxLeaves 10
+Time per instance per tree(ns): 185.94
+Ignore this number: -24937967.423242
+target/BWQS10bit_full_optm_yahoo_3_20 -ensemble ../fast_rank/yahoo/tree-ensemble-file_20000_10 -instances ../fast_rank/yahoo/100k.txt -maxLeaves 10
+Time per instance per tree(ns): 107.96
+Ignore this number: -24937791.404409
+target/BWQS10bit_full_optm_yahoo_3_30 -ensemble ../fast_rank/yahoo/tree-ensemble-file_20000_10 -instances ../fast_rank/yahoo/100k.txt -maxLeaves 10
+Time per instance per tree(ns): 82.17
+Ignore this number: -24937765.441853
+target/BWQS10bit_full_optm_yahoo_2_40 -ensemble ../fast_rank/yahoo/tree-ensemble-file_20000_10 -instances ../fast_rank/yahoo/100k.txt -maxLeaves 10
+Time per instance per tree(ns): 67.17
+Ignore this number: -24937967.422332
+target/BWQS10bit_full_optm_yahoo_2_50 -ensemble ../fast_rank/yahoo/tree-ensemble-file_20000_10 -instances ../fast_rank/yahoo/100k.txt -maxLeaves 10
+Time per instance per tree(ns): 52.26
+Ignore this number: -24937967.422232
+target/BWQS10bit_full_optm_yahoo_1_60 -ensemble ../fast_rank/yahoo/tree-ensemble-file_20000_10 -instances ../fast_rank/yahoo/100k.txt -maxLeaves 10
+Time per instance per tree(ns): 49.00
+Ignore this number: -24937958.785193
+target/BWQS10bit_full_optm_yahoo_1_70 -ensemble ../fast_rank/yahoo/tree-ensemble-file_20000_10 -instances ../fast_rank/yahoo/100k.txt -maxLeaves 10
+Time per instance per tree(ns): 45.49
+Ignore this number: -24937966.733211
+target/BWQS10bit_full_optm_yahoo_38_100 -ensemble ../fast_rank/yahoo/tree-ensemble-file_20000_10 -instances ../fast_rank/yahoo/100k.txt -maxLeaves 10
+Time per instance per tree(ns): 33.42
+Ignore this number: -24933646.721865
+target/BWQS10bit_full_optm_yahoo_31_200 -ensemble ../fast_rank/yahoo/tree-ensemble-file_20000_10 -instances ../fast_rank/yahoo/100k.txt -maxLeaves 10
+Time per instance per tree(ns): 22.57
+Ignore this number: -24934612.339398
+target/BWQS10bit_full_optm_yahoo_25_300 -ensemble ../fast_rank/yahoo/tree-ensemble-file_20000_10 -instances ../fast_rank/yahoo/100k.txt -maxLeaves 10
+Time per instance per tree(ns): 17.40
+Ignore this number: -24937894.909117
+target/BWQS10bit_full_optm_yahoo_20_400 -ensemble ../fast_rank/yahoo/tree-ensemble-file_20000_10 -instances ../fast_rank/yahoo/100k.txt -maxLeaves 10
+Time per instance per tree(ns): 14.33
+Ignore this number: -24937967.422646
+target/BWQS10bit_full_optm_yahoo_15_500 -ensemble ../fast_rank/yahoo/tree-ensemble-file_20000_10 -instances ../fast_rank/yahoo/100k.txt -maxLeaves 10
+Time per instance per tree(ns): 10.68
+Ignore this number: -24937489.145133
+target/BWQS10bit_full_optm_yahoo_11_600 -ensemble ../fast_rank/yahoo/tree-ensemble-file_20000_10 -instances ../fast_rank/yahoo/100k.txt -maxLeaves 10
+Time per instance per tree(ns): 10.85
+Ignore this number: -24937155.429244
+target/BWQS10bit_full_optm_yahoo_7_700 -ensemble ../fast_rank/yahoo/tree-ensemble-file_20000_10 -instances ../fast_rank/yahoo/100k.txt -maxLeaves 10
+Time per instance per tree(ns):  9.82
+Ignore this number: -24937420.365451
+target/BWQS10bit_full_optm_yahoo_3_800 -ensemble ../fast_rank/yahoo/tree-ensemble-file_20000_10 -instances ../fast_rank/yahoo/100k.txt -maxLeaves 10
+Time per instance per tree(ns):  8.54
+Ignore this number: -24937969.711880
+target/BWQS10bit_full_optm_yahoo_518_100 -ensemble ../fast_rank/yahoo/tree-ensemble-file_20000_10 -instances ../fast_rank/yahoo/100k.txt -maxLeaves 10
+Time per instance per tree(ns): 31.99
+Ignore this number: -24933151.314296
+target/BWQS10bit_full_optm_yahoo_371_600 -ensemble ../fast_rank/yahoo/tree-ensemble-file_20000_10 -instances ../fast_rank/yahoo/100k.txt -maxLeaves 10
+Time per instance per tree(ns): 10.66
+Ignore this number: -24909508.082979
+target/BWQS10bit_full_optm_yahoo_283_1100 -ensemble ../fast_rank/yahoo/tree-ensemble-file_20000_10 -instances ../fast_rank/yahoo/100k.txt -maxLeaves 10
+Time per instance per tree(ns):  7.14
+Ignore this number: -24909845.851194
+target/BWQS10bit_full_optm_yahoo_224_1600 -ensemble ../fast_rank/yahoo/tree-ensemble-file_20000_10 -instances ../fast_rank/yahoo/100k.txt -maxLeaves 10
+Time per instance per tree(ns):  5.76
+Ignore this number: -24916332.553333
+target/BWQS10bit_full_optm_yahoo_182_2100 -ensemble ../fast_rank/yahoo/tree-ensemble-file_20000_10 -instances ../fast_rank/yahoo/100k.txt -maxLeaves 10
+Time per instance per tree(ns):  5.19
+Ignore this number: -24918756.221679
+target/BWQS10bit_full_optm_yahoo_150_2600 -ensemble ../fast_rank/yahoo/tree-ensemble-file_20000_10 -instances ../fast_rank/yahoo/100k.txt -maxLeaves 10
+Time per instance per tree(ns):  4.71
+Ignore this number: -24921954.546342
+target/BWQS10bit_full_optm_yahoo_126_3100 -ensemble ../fast_rank/yahoo/tree-ensemble-file_20000_10 -instances ../fast_rank/yahoo/100k.txt -maxLeaves 10
+Time per instance per tree(ns):  4.50
+Ignore this number: -24911041.794320
+target/BWQS10bit_full_optm_yahoo_106_3600 -ensemble ../fast_rank/yahoo/tree-ensemble-file_20000_10 -instances ../fast_rank/yahoo/100k.txt -maxLeaves 10
+Time per instance per tree(ns):  4.31
+Ignore this number: -24916287.256933
+target/BWQS10bit_full_optm_yahoo_90_4100 -ensemble ../fast_rank/yahoo/tree-ensemble-file_20000_10 -instances ../fast_rank/yahoo/100k.txt -maxLeaves 10
+Time per instance per tree(ns):  4.13
+Ignore this number: -24933027.641146
+target/BWQS10bit_full_optm_yahoo_77_4600 -ensemble ../fast_rank/yahoo/tree-ensemble-file_20000_10 -instances ../fast_rank/yahoo/100k.txt -maxLeaves 10
+Time per instance per tree(ns):  4.22
+Ignore this number: -24913493.403020
+target/BWQS10bit_full_optm_yahoo_65_5100 -ensemble ../fast_rank/yahoo/tree-ensemble-file_20000_10 -instances ../fast_rank/yahoo/100k.txt -maxLeaves 10
+Time per instance per tree(ns):  3.96
+Ignore this number: -24934458.870364
+target/BWQS10bit_full_optm_yahoo_56_5600 -ensemble ../fast_rank/yahoo/tree-ensemble-file_20000_10 -instances ../fast_rank/yahoo/100k.txt -maxLeaves 10
+Time per instance per tree(ns):  4.05
+Ignore this number: -24922792.334078
+target/BWQS10bit_full_optm_yahoo_47_6100 -ensemble ../fast_rank/yahoo/tree-ensemble-file_20000_10 -instances ../fast_rank/yahoo/100k.txt -maxLeaves 10
+Time per instance per tree(ns):  3.97
+Ignore this number: -24914611.556334
+target/BWQS10bit_full_optm_yahoo_40_6600 -ensemble ../fast_rank/yahoo/tree-ensemble-file_20000_10 -instances ../fast_rank/yahoo/100k.txt -maxLeaves 10
+Time per instance per tree(ns):  4.09
+Ignore this number: -24908886.598666
+target/BWQS10bit_full_optm_yahoo_33_7100 -ensemble ../fast_rank/yahoo/tree-ensemble-file_20000_10 -instances ../fast_rank/yahoo/100k.txt -maxLeaves 10
+Time per instance per tree(ns):  3.76
+Ignore this number: -24932575.104313
+target/BWQS10bit_full_optm_yahoo_28_7600 -ensemble ../fast_rank/yahoo/tree-ensemble-file_20000_10 -instances ../fast_rank/yahoo/100k.txt -maxLeaves 10
+Time per instance per tree(ns):  3.95
+Ignore this number: -24928852.249405
+target/BWQS10bit_full_optm_yahoo_22_8100 -ensemble ../fast_rank/yahoo/tree-ensemble-file_20000_10 -instances ../fast_rank/yahoo/100k.txt -maxLeaves 10
+Time per instance per tree(ns):  3.81
+Ignore this number: -24927605.928580
+target/BWQS10bit_full_optm_yahoo_18_8600 -ensemble ../fast_rank/yahoo/tree-ensemble-file_20000_10 -instances ../fast_rank/yahoo/100k.txt -maxLeaves 10
+Time per instance per tree(ns):  3.89
+Ignore this number: -24926434.198458
+target/BWQS10bit_full_optm_yahoo_14_9100 -ensemble ../fast_rank/yahoo/tree-ensemble-file_20000_10 -instances ../fast_rank/yahoo/100k.txt -maxLeaves 10
+Time per instance per tree(ns):  3.83
+Ignore this number: -24926940.854777
+target/BWQS10bit_full_optm_yahoo_10_9600 -ensemble ../fast_rank/yahoo/tree-ensemble-file_20000_10 -instances ../fast_rank/yahoo/100k.txt -maxLeaves 10
+Time per instance per tree(ns):  3.92
+Ignore this number: -24928657.726645
+target/BWQS10bit_full_optm_yahoo_6_10100 -ensemble ../fast_rank/yahoo/tree-ensemble-file_20000_10 -instances ../fast_rank/yahoo/100k.txt -maxLeaves 10
+Time per instance per tree(ns):  3.70
+Ignore this number: -24937722.524887
+target/BWQS10bit_full_optm_yahoo_3_10600 -ensemble ../fast_rank/yahoo/tree-ensemble-file_20000_10 -instances ../fast_rank/yahoo/100k.txt -maxLeaves 10
+Time per instance per tree(ns):  3.57
+Ignore this number: -24937562.962032
+target/BWQS16bit_full_optm_yahoo_4_10 -ensemble ../fast_rank/yahoo/tree-ensemble-file_20000_16 -instances ../fast_rank/yahoo/100k.txt -maxLeaves 16
+Time per instance per tree(ns): 199.86
+Ignore this number: -189684723.910069
+target/BWQS16bit_full_optm_yahoo_3_20 -ensemble ../fast_rank/yahoo/tree-ensemble-file_20000_16 -instances ../fast_rank/yahoo/100k.txt -maxLeaves 16
+Time per instance per tree(ns): 118.05
+Ignore this number: -189684723.903144
+target/BWQS16bit_full_optm_yahoo_2_30 -ensemble ../fast_rank/yahoo/tree-ensemble-file_20000_16 -instances ../fast_rank/yahoo/100k.txt -maxLeaves 16
+Time per instance per tree(ns): 88.04
+Ignore this number: -189683415.899686
+target/BWQS16bit_full_optm_yahoo_1_40 -ensemble ../fast_rank/yahoo/tree-ensemble-file_20000_16 -instances ../fast_rank/yahoo/100k.txt -maxLeaves 16
+Time per instance per tree(ns): 69.82
+Ignore this number: -189684723.907288
+target/BWQS16bit_full_optm_yahoo_35_100 -ensemble ../fast_rank/yahoo/tree-ensemble-file_20000_16 -instances ../fast_rank/yahoo/100k.txt -maxLeaves 16
+Time per instance per tree(ns): 32.91
+Ignore this number: -189684723.903053
+target/BWQS16bit_full_optm_yahoo_26_200 -ensemble ../fast_rank/yahoo/tree-ensemble-file_20000_16 -instances ../fast_rank/yahoo/100k.txt -maxLeaves 16
+Time per instance per tree(ns): 21.04
+Ignore this number: -189684723.902780
+target/BWQS16bit_full_optm_yahoo_17_300 -ensemble ../fast_rank/yahoo/tree-ensemble-file_20000_16 -instances ../fast_rank/yahoo/100k.txt -maxLeaves 16
+Time per instance per tree(ns): 17.12
+Ignore this number: -189666623.466212
+target/BWQS16bit_full_optm_yahoo_10_400 -ensemble ../fast_rank/yahoo/tree-ensemble-file_20000_16 -instances ../fast_rank/yahoo/100k.txt -maxLeaves 16
+Time per instance per tree(ns): 14.61
+Ignore this number: -189684723.903646
+target/BWQS16bit_full_optm_yahoo_4_500 -ensemble ../fast_rank/yahoo/tree-ensemble-file_20000_16 -instances ../fast_rank/yahoo/100k.txt -maxLeaves 16
+Time per instance per tree(ns): 10.91
+Ignore this number: -189684723.903578
+target/BWQS16bit_full_optm_yahoo_515_100 -ensemble ../fast_rank/yahoo/tree-ensemble-file_20000_16 -instances ../fast_rank/yahoo/100k.txt -maxLeaves 16
+Time per instance per tree(ns): 31.19
+Ignore this number: -189684723.903077
+target/BWQS16bit_full_optm_yahoo_358_600 -ensemble ../fast_rank/yahoo/tree-ensemble-file_20000_16 -instances ../fast_rank/yahoo/100k.txt -maxLeaves 16
+Time per instance per tree(ns): 11.11
+Ignore this number: -189224048.690352
+target/BWQS16bit_full_optm_yahoo_264_1100 -ensemble ../fast_rank/yahoo/tree-ensemble-file_20000_16 -instances ../fast_rank/yahoo/100k.txt -maxLeaves 16
+Time per instance per tree(ns):  8.30
+Ignore this number: -189232369.316447
+target/BWQS16bit_full_optm_yahoo_201_1600 -ensemble ../fast_rank/yahoo/tree-ensemble-file_20000_16 -instances ../fast_rank/yahoo/100k.txt -maxLeaves 16
+Time per instance per tree(ns):  7.00
+Ignore this number: -189399252.612648
+target/BWQS16bit_full_optm_yahoo_157_2100 -ensemble ../fast_rank/yahoo/tree-ensemble-file_20000_16 -instances ../fast_rank/yahoo/100k.txt -maxLeaves 16
+Time per instance per tree(ns):  6.33
+Ignore this number: -189413533.452316
+target/BWQS16bit_full_optm_yahoo_123_2600 -ensemble ../fast_rank/yahoo/tree-ensemble-file_20000_16 -instances ../fast_rank/yahoo/100k.txt -maxLeaves 16
+Time per instance per tree(ns):  6.01
+Ignore this number: -189511974.774082
+target/BWQS16bit_full_optm_yahoo_97_3100 -ensemble ../fast_rank/yahoo/tree-ensemble-file_20000_16 -instances ../fast_rank/yahoo/100k.txt -maxLeaves 16
+Time per instance per tree(ns):  5.75
+Ignore this number: -189411164.836234
+target/BWQS16bit_full_optm_yahoo_76_3600 -ensemble ../fast_rank/yahoo/tree-ensemble-file_20000_16 -instances ../fast_rank/yahoo/100k.txt -maxLeaves 16
+Time per instance per tree(ns):  5.69
+Ignore this number: -189487889.336734
+target/BWQS16bit_full_optm_yahoo_59_4100 -ensemble ../fast_rank/yahoo/tree-ensemble-file_20000_16 -instances ../fast_rank/yahoo/100k.txt -maxLeaves 16
+Time per instance per tree(ns):  5.36
+Ignore this number: -189644620.205795
+target/BWQS16bit_full_optm_yahoo_44_4600 -ensemble ../fast_rank/yahoo/tree-ensemble-file_20000_16 -instances ../fast_rank/yahoo/100k.txt -maxLeaves 16
+Time per instance per tree(ns):  5.44
+Ignore this number: -189478835.111600
+target/BWQS16bit_full_optm_yahoo_32_5100 -ensemble ../fast_rank/yahoo/tree-ensemble-file_20000_16 -instances ../fast_rank/yahoo/100k.txt -maxLeaves 16
+Time per instance per tree(ns):  5.30
+Ignore this number: -189667611.185988
+target/BWQS16bit_full_optm_yahoo_22_5600 -ensemble ../fast_rank/yahoo/tree-ensemble-file_20000_16 -instances ../fast_rank/yahoo/100k.txt -maxLeaves 16
+Time per instance per tree(ns):  5.31
+Ignore this number: -189611939.632919
+target/BWQS16bit_full_optm_yahoo_13_6100 -ensemble ../fast_rank/yahoo/tree-ensemble-file_20000_16 -instances ../fast_rank/yahoo/100k.txt -maxLeaves 16
+Time per instance per tree(ns):  5.35
+Ignore this number: -189609725.391015
+target/BWQS16bit_full_optm_yahoo_5_6600 -ensemble ../fast_rank/yahoo/tree-ensemble-file_20000_16 -instances ../fast_rank/yahoo/100k.txt -maxLeaves 16
+Time per instance per tree(ns):  5.54
+Ignore this number: -189648883.100677

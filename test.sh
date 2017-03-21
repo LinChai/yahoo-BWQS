@@ -1,5 +1,5 @@
-for LEAF in 8
-# 10 16 32 50 64 150
+for LEAF in 10 16
+#32 50 64 150 8
 do
     input="./yahoo_"$LEAF"_out"
     while IFS=' ' read -r cache_size D S

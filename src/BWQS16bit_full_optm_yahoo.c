@@ -105,7 +105,7 @@ void compute_QS()
             unsigned int * curOffset = offsets[mt];
             Byte * curbitvector = mybitvectors[mt];
             float * curthresholds = thresholds[mt];
-            float* curleaves = leaves[mt];
+            double* curleaves = leaves[mt];
             // Step 1:
             for (k=0; k<D; k++) {
                 float*d = features[i*D+k];
@@ -154,7 +154,7 @@ void compute_QS()
         unsigned int * curOffset = offsets[mt];
         Byte * curbitvector = mybitvectors[mt];
         float * curthresholds = thresholds[mt];
-        float* curleaves = leaves[mt];
+        double* curleaves = leaves[mt];
         // Step 1:
         for (k=0; k<D; k++) {
             float*d = features[i*D+k];
@@ -216,16 +216,17 @@ void compute_QS()
                 mtSize = nbTrees - S * (numberOfMetaTree-1);
             // Step 1:
             unsigned int * curT = tree_ids[mt]; 
-            unsigned int * curOffset = offsets[mt];
+            unsigned int * curoffsets = offsets[mt];
             Byte * curbitvector = mybitvectors[mt];
             float * curthresholds = thresholds[mt];
-            float* curleaves = leaves[mt];
+            double* curleaves = leaves[mt];
             for (k=0; k<r; k++) {
-                float *curfeatures = features[divideInstance*D+k];
+                float *d = features[divideInstance*D+k];
+                Byte * curV = v[k];
                 for (j=0; j<numberOfFeatures; j++) {
                     p = curoffsets[j];
                     end = curoffsets[j+1]; // what we need to test is [begin, end)
-                    if (curfeatures[j] <= curthresholds[p])
+                    if (d[j] <= curthresholds[p])
                         continue;
                     while (p+4<end && d[j] > curthresholds[p+4]) // still false node
                     {

@@ -109,7 +109,7 @@ void compute_QS()
             float * curthresholds = thresholds[mt];
             Byte *curmybitvectors = mybitvectors[mt];
             unsigned int * curtree_ids = tree_ids[mt];
-            float* curleaves = leaves[mt];
+            double* curleaves = leaves[mt];
             for (k=0; k<D; k++) {
                 float * curfeatures = features[i*D+k];
                 for (j=0; j<numberOfFeatures; j++) {
@@ -165,10 +165,10 @@ void compute_QS()
                 mtSize = nbTrees - S * (numberOfMetaTree-1);
             // Step 1:
             unsigned int * curoffsets = offsets[mt];
-            unsigned int * curthresholds = thresholds[mt];
+            float * curthresholds = thresholds[mt];
             Byte *curmybitvectors = mybitvectors[mt];
             unsigned int * curtree_ids = tree_ids[mt];
-            float* curleaves = leaves[mt];
+            double* curleaves = leaves[mt];
             for (k=0; k<r; k++) {
                 float * curfeatures = features[divideInstance*D+k];
                 for (j=0; j<numberOfFeatures; j++) {
