@@ -90,7 +90,7 @@ void compute_QS()
             unsigned int * curOffset = offsets[mt];
             Byte ** curbitvector = bitvectors[mt];
             float * curthresholds = thresholds[mt];
-            float * curleaves = leaves[mt];
+            double * curleaves = leaves[mt];
             for (k=0; k<D; k++) {
                 float*d = features[i*D+k];
                 Byte ** curV = v[k];
@@ -138,7 +138,7 @@ void compute_QS()
         unsigned int * curOffset = offsets[mt];
         Byte ** curbitvector = bitvectors[mt];
         float * curthresholds = thresholds[mt];
-        float * curleaves = leaves[mt];
+        double * curleaves = leaves[mt];
         for (k=0; k<D; k++) {
             float*d = features[i*D+k];
             Byte ** curV = v[k];
@@ -166,7 +166,6 @@ void compute_QS()
             }
         }//end k
         // Step 2:
-        Byte test;
         for (k=0; k<D; k++) {
             score = 0;
             for (h=0; h<mtSize; h++)
@@ -204,7 +203,7 @@ void compute_QS()
             unsigned int * curOffset = offsets[mt];
             Byte ** curbitvector = bitvectors[mt];
             float * curthresholds = thresholds[mt];
-            float * curleaves = leaves[mt];
+            double * curleaves = leaves[mt];
             for (k=0; k<D; k++) {
                 float*d = features[divideInstance*D+k];
                 Byte ** curV = v[k];
@@ -232,7 +231,6 @@ void compute_QS()
                 }
             }//end 
             // Step 2:
-            Byte test;
             for (k=0; k<r; k++) {
                 score = 0;
                 for (h=0; h<mtSize; h++)
